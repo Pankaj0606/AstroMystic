@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const request = require('request');
+require('dotenv').config(); // Load environment variables
 
 // Use dynamic import for node-fetch
 let fetch;
@@ -10,7 +11,10 @@ let fetch;
 
 // Function to get latitude and longitude from a place name using geocoding API
 async function getGeocodingData(place) {
-  const apiKey = '66f961dc1a5d2290415842ijfd3f30b'; // Geocoding API key
+  //const apiKey = '66f961dc1a5d2290415842ijfd3f30b'; // Geocoding API key
+  
+  const apiKey = process.env.GEOCODING_API_KEY;
+
   const response = await fetch(`https://geocode.maps.co/search?q=${place}&api_key=${apiKey}`);
   const data = await response.json();
 
@@ -58,7 +62,7 @@ router.post('/planets', async (req, res) => {
       url: 'https://json.freeastrologyapi.com/planets',
       headers: {
         'Content-Type': 'application/json',
-        'x-api-key': 'eXiD7UyNku6IyWMxfoSVq1BWNNrX829w5M81QlRk'
+        'x-api-key': process.env.ASTROLOGY_API_KEY // Hidden API key
       },
       body: JSON.stringify(apiData)
     };
