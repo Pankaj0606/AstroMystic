@@ -1,7 +1,5 @@
 // Function to fetch geocoding data and convert lat/lon to numbers
 async function getGeocodingData(place) {
-    //const apiKey = '66f961dc1a5d2290415842ijfd3f30b'; // Your API key
-    //const apiKey = process.env.66f961dc1a5d2290415842ijfd3f30b;
     require('dotenv').config();
     const apiKey = process.env.GEOCODING_API_KEY;
 
