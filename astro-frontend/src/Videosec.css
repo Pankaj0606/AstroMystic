@@ -1,0 +1,33 @@
+.centered-title {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #fff;
+  }
+  
+  .video-heading-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px; /* Adjust this for overall width */
+    padding: 20px;
+  }
+  
+  .youtube-video {
+    flex: 1; /* Takes up half the space */
+    padding-right: 20px; /* Adds spacing between video and heading */
+  }
+  
+  .heading-text {
+    flex: 1; /* Takes up half the space */
+    padding-left: 20px;
+    text-align: left;
+    color: #fff;
+  }
+  
+  .heading-text p {
+    font-size: 25px;
+    line-height: 1.6;
+  }
+  

@@ -1,0 +1,39 @@
+[
+    {
+      "profilePic": "../images/Gemini_Generated_Image_x3f4p1x3f4p1x3f4.jpeg",
+      "date": "2021-01-01",
+      "oneLiner": "Saturn in Bharani Nakshatra",
+      "fullReview": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "link": "1",
+      "article": "Detailed article content for Saturn in Bharani Nakshatra.",
+      "image": "../images/saturn_bharani_image.jpeg"
+    },
+    {
+      "profilePic": "../images/Gemini_Generated_Image_x3f4p1x3f4p1x3f4.jpeg",
+      "date": "2021-01-01",
+      "oneLiner": "Saturn in Ashwini Nakshatra",
+      "fullReview": "Proin non orci eu lorem malesuada tincidunt.",
+      "link": "2",
+      "article": "Detailed article content for Saturn in Ashwini Nakshatra.",
+      "image": "../images/saturn_ashwini_image.jpeg"
+    },
+    {
+      "profilePic": "../images/Gemini_Generated_Image_x3f4p1x3f4p1x3f4.jpeg",
+      "date": "2021-01-01",
+      "oneLiner": "Jupiter and Karma of your past Life",
+      "fullReview": "Proin non orci eu lorem malesuada tincidunt.",
+      "link": "3",
+      "article": "Detailed article content for Jupiter and Karma.",
+      "image": "../images/jupiter_karma_image.jpeg"
+    },
+    {
+        "profilePic": "../images/Gemini_Generated_Image_x3f4p1x3f4p1x3f4.jpeg",
+        "date": "2021-01-01",
+        "oneLiner": "Saturn in Bharani Nakshatra",
+        "fullReview": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "link": "1",
+        "article": "Detailed article content for Saturn in Bharani Nakshatra.",
+        "image": "../images/saturn_bharani_image.jpeg"
+    }
+  ]
+  

@@ -1,0 +1,128 @@
+/* Overall container for the reviews */
+.reviews-section-card {
+    background: linear-gradient(135deg, #2e004f, #130032); /* Dark purple background */
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Title for the review section */
+  .review-title-card {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  /* Container for the cards slider */
+  .cards-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%; /* Ensures the slider takes up full width */
+  }
+
+  .review-cards-container {
+    display: flex;
+    gap: 20px;
+    width: 900px; /* Adjust the width for 3 cards */
+    justify-content: center;
+  }
+  
+  /* Review Card styling */
+  .review-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: opacity 0.4s ease;
+  }
+
+  .name {
+    font-size: 14px;
+    transition: opacity 0.4s ease;
+  }
+  
+  .one-liner {
+    font-size: 18px;
+    margin-bottom: 10px;
+    transition: transform 0.4s ease;
+  }
+  
+  .review-text {
+    font-size: 16px;
+    line-height: 1.5;
+    max-height: 50px; /* Show only part of the paragraph */
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .stars {
+    margin-top: 10px;
+    font-size: 20px;
+    color: gold;
+  }
+  
+  .review-card:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-10px); /* Lifts the card slightly on hover */
+  }
+  
+  .review-card:hover .profile-pic {
+    opacity: 0; /* Hide the profile pic */
+  }
+
+  .review-card:hover .name {
+    opacity: 0; /* Hide the profile pic */
+  }
+  
+  .review-card:hover .one-liner {
+    transform: translateY(-120px); /* Move the one-liner to the top */
+  }
+  
+  .review-card:hover .review-text {
+    max-height: 200px; /* Reveal the full paragraph */
+    transition: max-height 0.6s ease; /* Smooth transition */
+  }
+  
+  /* Arrow styling */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 2rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%;
+    transition: background 0.3s;
+    transform: translateY(-50%);
+  }
+  
+  .arrow:hover {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Left and right arrows positioning */
+  .left-arrow {
+    left: 0px; /* Visible without scrolling */
+  }
+  
+  .right-arrow {
+    right: 0px; /* Visible without scrolling */
+  }
+  

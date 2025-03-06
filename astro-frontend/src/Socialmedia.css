@@ -1,0 +1,33 @@
+.social-media-strip {
+    background-color: rgba(20, 0, 50, 0.9);
+    padding: 10px 20px;
+    overflow: hidden; /* Hides overflow to create a smooth scrolling effect */
+  }
+  
+  .social-media-text {
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    animation: moveText 10s linear infinite; /* Move text continuously */
+  }
+  
+  .social-link {
+    text-decoration: none;
+    color: #61dafb;
+    margin: 0 30px; /* Adds spacing between the social media links */
+    transition: color 0.3s ease;
+  }
+  
+  .social-link:hover {
+    color: #3ea1cf;
+  }
+  
+  /* Keyframes for text movement */
+  @keyframes moveText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }

@@ -1,0 +1,48 @@
+.content-section {
+    padding: 60px 20px;
+    color: #fff;
+  }
+  
+  .quote-h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  
+  .image-paragraph-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .image-paragraph-container img {
+    max-width: 45%;
+    border-radius: 10px;
+  }
+  
+  .image-paragraph-container .text {
+    max-width: 55%;
+  }
+  
+  .image-paragraph-container p {
+    font-size: 18px;
+  }
+  
+  /* Add this to your App.css file */
+  .image-paragraph-container img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 500px; /* Adjust to your preferred height */
+  }
+  
+  .image-paragraph-container.reversed-container img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 500px; /* Adjust to your preferred height */
+  }
+  
+  
+  .reversed-container {
+    flex-direction: row-reverse;
+  }

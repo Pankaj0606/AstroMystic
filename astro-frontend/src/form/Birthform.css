@@ -1,0 +1,70 @@
+.astrology-form-container {
+    display: flex;
+    flex-direction: column;  /* Column layout so <h1> is above the form */
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 100vh;           /* Full viewport height */
+    width: 180vh;
+  }
+  
+  h1 {
+    color: #f5d142; /* Golden text */
+    margin-bottom: 20px;
+  }
+  
+  .astrology-form {
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #f5d142; /* Golden border */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Adjust width to full available space */
+    max-width: 400px; /* Limit the form width to 400px */
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0); /* Transparent background */
+    transition: box-shadow 0.3s ease-in-out;  /* For the hover effect */
+  }
+  
+  .astrology-form:hover {
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.8); /* Golden shine on hover */
+  }
+  
+  label {
+    color: #f5d142; /* Golden for labels */
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  input {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #f5d142; /* Golden border for inputs */
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent input background */
+    color: #f5d142; /* Golden text in inputs */
+  }
+  
+  input::placeholder {
+    color: #f5d142; /* Golden placeholder text */
+  }
+  
+  button {
+    background-color: white; /* Golden button */
+    color: #3e1f47; /* Dark purple text */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  }
+  
+  button:hover {
+    background-color: #d1b035; /* Slightly darker golden on hover */
+    box-shadow: 0 0 10px #f5d142; /* Golden glow on hover */
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  

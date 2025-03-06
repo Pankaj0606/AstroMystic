@@ -1,0 +1,64 @@
+/* Dark purple background for the whole contact section */
+.contact-section {
+    background: linear-gradient(135deg, #2e004f, #130032); /* Dark purple gradient */
+    padding: 10px 20px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-title {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.contact-para {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* Contact info container */
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 50px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual contact item styling */
+.contact-item {
+    background-color: rgba(255, 255, 255, 0.1); /* Slight transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-item h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-item a {
+    font-size: 18px;
+    margin: 5px 0;
+    color: white;
+}
+
+.contact-item p {
+    font-size: 18px;
+    margin: 5px 0;
+    color: white;
+}
+
+.contact-item:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Brighter background on hover */
+}

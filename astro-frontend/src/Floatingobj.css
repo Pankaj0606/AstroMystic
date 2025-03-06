@@ -1,0 +1,49 @@
+/* Floating Animations */
+.moving-objects {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+  }
+  
+  .object {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: float 15s linear infinite;
+    z-index: 0;
+  }
+  
+  .object1 {
+    top: 15%;
+    left: 10%;
+    animation-duration: 10s;
+  }
+  
+  .object2 {
+    top: 45%;
+    left: 75%;
+    animation-duration: 18s;
+  }
+  
+  .object3 {
+    top: 85%;
+    left: 25%;
+    animation-duration: 20s;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-50px) scale(1.2);
+    }
+    100% {
+      transform: translateY(0) scale(1);
+    }
+  }
