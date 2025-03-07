@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
-import './BirthTable.css'; // For styling the table
+import './Birthtable.css'; // For styling the table
 import { useLocation } from 'react-router-dom'; // Import useLocation hook
 import { AstrologyContext } from '../Context';
 
