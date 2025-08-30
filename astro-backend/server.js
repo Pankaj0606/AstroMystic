@@ -6,7 +6,13 @@ require('dotenv').config();
 
 const blogRoute = require('./blog');
 
-app.use(cors());
+//app.use(cors());
+const corsOptions = {
+  origin: 'https://astro-mystic.vercel.app', // Your Vercel frontend URL
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Use the planets API route
