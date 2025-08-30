@@ -1,0 +1,102 @@
+/* astro-frontend/src/courses/Courses.css */
+
+.courses-container {
+    background: linear-gradient(135deg, #2e004f, #130032);
+    color: white;
+    padding: 80px 20px 100px 80px; /* Added more bottom padding */
+    min-height: 100vh;
+    text-align: center;
+}
+
+.courses-header {
+    max-width: 800px;
+    margin: 40px auto 60px auto;
+}
+
+.courses-header h1 {
+    font-size: 3rem;
+    color: gold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+}
+
+.courses-header p {
+    font-size: 1.2rem;
+    color: #E0E0E0; /* Soft silver */
+    line-height: 1.6;
+}
+
+.course-grid {
+    display: grid;
+    /* This creates a responsive grid that adjusts columns automatically */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.course-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(100, 0, 255, 0.3);
+}
+
+.course-icon {
+    font-size: 3.5rem;
+    color: gold;
+    margin-bottom: 20px;
+}
+
+.course-title {
+    font-size: 1.8rem;
+    color: #E0E0E0; /* Silver */
+    margin-bottom: 10px;
+}
+
+.course-level {
+    font-size: 0.9rem;
+    color: #D1C4E9; /* Lavender */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.course-description {
+    font-size: 1rem;
+    color: #D1C4E9; /* Lavender */
+    line-height: 1.6;
+    flex-grow: 1; /* Makes sure cards in a row have the same height */
+    margin-bottom: 25px;
+}
+
+.course-button {
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #130032; /* Dark purple text */
+    background: linear-gradient(45deg, gold, #ffeb3b);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.course-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+}

@@ -1,0 +1,194 @@
+.tarot-reading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    margin-top: 60px;
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* Increased the gap slightly for better spacing */
+    margin: 30px 0; /* Increased top/bottom margin */
+    max-width: 1200px; /* NEW: Adjusted width for 5 larger cards */
+}
+.card {
+    width: 180px; /* NEW: Increased card width */
+    height: 270px; /* NEW: Increased card height to maintain 2:3 ratio */
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    max-width: 800px;
+}
+
+.card {
+    width: 100px;
+    height: 150px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+} */
+
+.card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 2px solid #555;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card.selected {
+    transform: translateY(-10px);
+    box-shadow: 0 0 15px 5px gold;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.shuffle-btn, .flip-btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    background-color: #6200ea;
+    color: white;
+    margin-top: 20px;
+}
+
+.selected-cards {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chosen-cards-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    perspective: 1000px; /* For 3D flip effect */
+}
+
+.flipped-card {
+    width: 180px;   /* Match the size of the .card class */
+    height: 270px;  /* Match the size of the .card class */
+    background-color: transparent;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flipped-card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 8px;
+}
+
+.card-front img, .card-back img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 2px solid gold;
+}
+
+.card-front {
+    transform: rotateY(180deg);
+}
+
+.card-meanings {
+    margin-top: 40px;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card-meaning-row {
+    display: flex;
+    align-items: center; /* Vertically align the text with the larger image */
+    gap: 30px;           /* Increased gap for more space */
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;       /* Increased padding */
+    border-radius: 12px;
+}
+
+.card-meaning-image {
+    flex-shrink: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-meaning-image img {
+    width: 220px;   /* NEW larger size */
+    height: 330px;  /* NEW larger size */
+    border-radius: 12px; /* Slightly larger radius for a softer look */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* This is the hover state: when you hover the ENTIRE ROW... */
+.card-meaning-row:hover .card-meaning-image {
+    /* ...the card image lifts up (scales) slightly */
+    transform: scale(1.05) translateY(-5px);
+}
+
+.card-meaning-row:hover .card-meaning-image img {
+    /* ...and the golden glow appears */
+    box-shadow: 0 0 25px 10px rgba(255, 215, 0, 0.5); /* Gold with transparency */
+}
+
+.card-meaning-head {
+    margin-top: 0;
+    color: gold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* .card-meaning-characteristic-head {
+    margin-bottom: 5px;
+    color: #ccc;
+} */
+
+.card-meaning-characteristic-head {
+    margin-top: 15px; /* Adds space between characteristics */
+    margin-bottom: 5px;
+    color: #E0E0E0; /* A beautiful, soft silver/off-white */
+    font-weight: bold;
+    letter-spacing: 0.5px; /* Adds a touch of elegance */
+}
+
+/* .card-meaning-characteristic-para {
+    margin-top: 0;
+} */
+
+.card-meaning-characteristic-para {
+    margin-top: 0;
+    color: #D1C4E9; /* A light, ethereal lavender that complements purple */
+    font-size: 0.95em; /* Slightly smaller for hierarchy */
+    line-height: 1.5;  /* Improves readability */
+}

@@ -1,0 +1,46 @@
+.payment-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    padding-top: 80px; /* Adjust this based on your navbar height */
+    min-height: calc(100vh - 160px); /* Adjust the 160px based on your navbar and footer height */
+    width: 100vw;
+}
+
+.payment-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.payment-image {
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.payment-details {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.payment-details h3 {
+    margin-bottom: 10px;
+}
+
+.payment-details p {
+    margin-bottom: 15px;
+}
+
+.payment-details a {
+    color: #6200ea;
+    text-decoration: none;
+}
+
+.payment-details a:hover {
+    text-decoration: underline;
+}

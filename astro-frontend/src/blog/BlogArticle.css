@@ -1,0 +1,127 @@
+.article-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto 0; /* Adds a 40px margin at the top */
+    padding: 20px;
+    gap: 20px;
+    width: 60vw;
+}
+
+  
+  /* Left side (70% width) */
+  .article-content {
+    flex: 7;
+    padding-right: 20px;
+  }
+  
+  .article-oneLiner {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .article-artimage {
+    width: 400px; /* Set a fixed width for a square shape */
+    height: 400px; /* Set the height equal to the width for a square */
+    object-fit: cover; /* Ensure the image fits nicely without distortion */
+    margin: 0 auto 20px; /* Center the image horizontally and add bottom margin */
+    display: block; /* Center the image since it's a block-level element */
+    border-radius: 10px; /* Optional: Add rounded corners for a polished look */
+}
+
+  
+  .article-para {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  /* Share options */
+  .article-share {
+    margin-top: 30px; /* More space above */
+    padding-top: 20px; /* Space from the border */
+    border-top: 1px solid #444; /* A nice separator line */
+    display: flex;
+    align-items: center;
+    gap: 15px; /* More space between items */
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  /* Add this new rule to style the buttons from the library */
+.article-share button {
+    transition: transform 0.2s ease-in-out;
+}
+
+.article-share button:hover {
+    transform: scale(1.1); /* A nice little pop effect on hover */
+}
+  
+  .article-share img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  
+ /* Right side (30% width, full height) */
+.recent-posts {
+  flex: 3;
+  background-color: #4b0082; /* Dark purple */
+  color: white; /* Text color */
+  padding: 20px;
+  border-radius: 8px;
+  position: fixed; /* Makes it fixed on the right */
+  top: 60px; /* Aligns to the top of the viewport */
+  right: 0; /* Aligns to the right of the viewport */
+  width: 30%; /* Maintains 30% width */
+  height: 100vh; /* Full height of the screen */
+  overflow-y: auto; /* Adds scrolling if the content exceeds the height */
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Optional shadow for better visibility */
+}
+
+.article-recentpost {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
+  color: white; /* Ensures the title text is white */
+}
+
+.recent-post-item {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  color: white; /* Text color for items */
+
+  display: flex; /* Align image and text side by side */
+  align-items: center;
+}
+
+.article-paradate {
+  font-size: 0.9rem;
+  color: #ccc; /* Subtle gray for dates */
+  margin-bottom: 5px; /* Space below the date */
+}
+
+.recent-post-item a {
+  text-decoration: none;
+  color: white; /* White text for links */
+  font-weight: bold;
+}
+
+.recent-post-item a:hover {
+  color: #ffcc00; /* Golden-yellow hover effect */
+}
+
+.article-thumbnail {
+  width: 50px; /* Square shape */
+  height: 50px; /* Matches width for a square */
+  border-radius: 8px; /* Optional rounded corners */
+  margin-right: 10px; /* Space between image and text */
+  object-fit: cover; /* Ensures image fits within the square */
+}
+
+.recent-post-text {
+  flex: 1; /* Makes text container take remaining space */
+}

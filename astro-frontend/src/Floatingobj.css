@@ -1,0 +1,100 @@
+/* astro-frontend/src/home/Floatingobj.css */
+
+.moving-objects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.object {
+  position: absolute;
+  color: rgba(255, 215, 0, 0.25); /* Made slightly less transparent */
+  font-size: 25px; /* Increased base size */
+  
+  /* Start with a subtle glow */
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+}
+
+.object::before {
+  display: block;
+}
+
+/* --- THE KEYFRAMES FOR OUR "NEAR" OBJECTS (Brighter Twinkle) --- */
+@keyframes floatDriftNear {
+  0% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+    opacity: 0.2;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+  }
+  50% {
+    transform: translateY(-100px) translateX(50px) rotate(180deg);
+    opacity: 0.8; /* Becomes much more visible */
+    text-shadow: 0 0 25px rgba(255, 215, 0, 0.8); /* Glows brightly */
+  }
+  100% {
+    transform: translateY(0px) translateX(0px) rotate(360deg);
+    opacity: 0.2;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+  }
+}
+
+/* --- THE KEYFRAMES FOR OUR "FAR" OBJECTS (Subtler Twinkle) --- */
+@keyframes floatDriftFar {
+  0% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+    opacity: 0.1;
+  }
+  50% {
+    transform: translateY(-60px) translateX(-30px) rotate(120deg);
+    opacity: 0.4; /* Only gets moderately visible */
+  }
+  100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+    opacity: 0.1;
+  }
+}
+
+
+/* --- DEFINING OUR CELESTIAL SHAPES & ASSIGNING ANIMATIONS --- */
+
+/* NEAR Layer - Larger, brighter, more dynamic */
+.object-1 { left: 10%; top: 20%; animation: floatDriftNear 25s ease-in-out infinite; animation-delay: -5s; }
+.object-1::before { content: '✶'; font-size: 40px; } /* Large Star */
+
+.object-2 { left: 85%; top: 15%; animation: floatDriftNear 30s ease-in-out infinite; animation-delay: -20s; }
+.object-2::before { content: '✨'; font-size: 35px; } /* Glowing Sparkle Emoji */
+
+.object-3 { left: 90%; top: 60%; animation: floatDriftNear 28s ease-in-out infinite; animation-delay: -10s; }
+.object-3::before { content: '✦'; font-size: 30px; } /* Sparkle */
+
+.object-4 { left: 50%; top: 10%; animation: floatDriftNear 45s ease-in-out infinite; animation-delay: -3s; }
+.object-4::before { content: '✴'; font-size: 25px; } /* Eight-Pointed Star */
+
+.object-5 { left: 35%; top: 5%; animation: floatDriftNear 22s ease-in-out infinite; animation-delay: -22s; }
+.object-5::before { content: '✵'; font-size: 28px; } /* Shining Star */
+
+.object-6 { left: 75%; top: 80%; animation: floatDriftNear 33s ease-in-out infinite; animation-delay: -12s; }
+.object-6::before { content: '★'; font-size: 30px; } /* Star */
+
+/* FAR Layer - Smaller, slower, more subtle */
+.object-7 { left: 5%; top: 50%; animation: floatDriftFar 40s ease-in-out infinite; animation-delay: 0s; }
+.object-7::before { content: '✧'; font-size: 18px; } /* Small Sparkle */
+
+.object-8 { left: 20%; top: 80%; animation: floatDriftFar 35s ease-in-out infinite; animation-delay: -15s; }
+.object-8::before { content: '·'; } /* A tiny dot */
+
+.object-9 { left: 70%; top: 90%; animation: floatDriftFar 32s ease-in-out infinite; animation-delay: -8s; }
+.object-9::before { content: '✩'; font-size: 20px; } /* Outline Star */
+
+.object-10 { left: 40%; top: 65%; animation: floatDriftFar 50s ease-in-out infinite; animation-delay: -18s; }
+.object-10::before { content: '.'; } /* Another tiny dot */
+
+.object-11 { left: 60%; top: 40%; animation: floatDriftFar 38s ease-in-out infinite; animation-delay: -25s; }
+.object-11::before { content: '✧'; font-size: 15px; } /* Smallest Sparkle */
+
+.object-12 { left: 15%; top: 5%; animation: floatDriftFar 42s ease-in-out infinite; animation-delay: -7s; }
+.object-12::before { content: '★'; font-size: 18px; } /* Small Star */

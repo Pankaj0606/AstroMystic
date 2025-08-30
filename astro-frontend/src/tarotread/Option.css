@@ -1,0 +1,70 @@
+.consultation-container {
+    text-align: center; /* Center the heading */
+    padding: 20px;
+    padding-top: 10px;
+}
+
+.consultation-head {
+    margin-bottom: 30px; /* Space below the heading */
+}
+
+.consultation-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    justify-items: center;
+   
+}
+
+
+.consultation-card {
+    background-color: #483D8B; /* Light purple background for cards */
+    border: 1px solid #ddd; /* Border around the card */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+
+    
+    color: white;
+    
+    width: 100%; /* Allows the card to adapt to grid column width */
+    max-width: 300px; /* Restrict max width */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-head {
+    color: white;
+}
+
+.consultation-card:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+
+}
+
+.consultation-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px; /* Space between image and paragraph */
+    border-radius: 8px; /* Slight rounding on images */
+}
+
+.card-para {
+    font-size: 14px;
+    color: white; /* Subtle color for text */
+}
+
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-grid {
+        grid-template-columns: 1fr; /* 1 card per row */
+    }
+}

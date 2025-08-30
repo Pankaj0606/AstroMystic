@@ -1,0 +1,43 @@
+/* BirthTable.css */
+.astrology-table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Add padding around the container */
+    margin: 0 5%; /* Leave some gap on the left and right */
+}
+
+.astrology-table {
+    width: 90%; /* Table width to fill most of the container */
+    border-collapse: collapse;
+    background-color: #1f1f1f; /* Dark background color */
+    color: #f1f1f1; /* Light text color */
+    text-align: center;
+    border: 1px solid #f1f1f1;
+    border-radius: 10px;
+}
+
+.astrology-table th, .astrology-table td {
+    padding: 10px;
+    border: 1px solid #f1f1f1; /* Border for each cell */
+    font-size: 14px;
+}
+
+.astrology-table th {
+    background-color: #4b0082; /* Dark purple header background */
+    color: #fff;
+    font-weight: bold;
+}
+
+.astrology-table td {
+    background-color: #2a2a2a; /* Darker cell background */
+}
+
+.astrology-table tbody tr:nth-child(even) {
+    background-color: #333333; /* Alternate row colors */
+}
+
+.astrology-table-container {
+    margin: 20px auto; /* Center the table vertically as well */
+    max-width: 1200px; /* Max width for the table */
+}

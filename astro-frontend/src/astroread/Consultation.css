@@ -1,0 +1,89 @@
+.consultation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px; /* Adjust based on your fixed navbar height */
+    padding-bottom: 40px;
+    min-height: calc(100vh - 160px); /* Adjust this to fit below navbar and above footer */
+    text-align: center;
+}
+
+.consultation-intro {
+    margin-bottom: 30px;
+}
+
+.consultation-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #6200ea;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.consultation-link:hover {
+    text-decoration: underline;
+}
+
+.pdf-section {
+    width: 50%;  /* Adjust width as needed */
+    margin-top: 30px;
+}
+
+.pdf-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.pdf-item {
+    background-color: #3700b3; /* Darker purple background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+
+
+    color: white; /* Text color */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Optional: Add a light border */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.pdf-item:hover {
+    background-color: gold; /* Gold background on hover */
+    color: #000; /* Change text color to black on hover for contrast */
+}
+
+.pdf-name {
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+
+.pdf-download {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    
+    text-decoration: none;
+    font-weight: bold;
+
+    color: #ffa500; /* Darker shade of orange for the download link */
+   
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.pdf-download:hover {
+    color: #ff8c00; /* Change to a lighter orange on hover */
+}
+
+.download-icon {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.pdf-download:hover {
+    color: #3700b3;
+}

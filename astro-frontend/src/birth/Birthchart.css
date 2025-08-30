@@ -1,0 +1,100 @@
+.birth-chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+
+
+    flex-direction: column;    /* Column layout so <h1> is above the content */
+ 
+    align-items: center;       /* Center content horizontally */
+    height: 80vh;             /* Full viewport height */
+    width: 100vw;               /* Full viewport width */
+    color: white;
+  }
+  
+  .birth-chart-svg {
+    width: 100%; /* Make it responsive */
+    max-width: 400px; /* Limit max width */
+    height: auto; /* Maintain aspect ratio */
+
+  }
+  
+  
+  .planet-text {
+    font-size: 10px;
+    font-weight: bold;
+    fill: red;
+  }
+
+  .house-number {
+    fill: red; /* For SVG text, use 'fill' instead of 'color' */
+    font-size: 12px;
+  }
+
+  .planet-name {
+    color: white;
+    fill: white;
+    font-size: 12px;
+  }
+
+
+  .static-planet {
+    color: white;
+    fill: white;
+  }
+
+
+/* Base styles for the polygon */
+.house-polygon {
+    stroke-width: 2;
+    /*fill: transparent;*/
+    transition: fill 0.3s ease;
+    text-align: center;
+    stroke-dasharray: 500; /* Set dasharray equal to or larger than the perimeter of the polygon */
+    stroke-dashoffset: 0;
+    animation: dash 5s linear infinite, spark 2s ease-in-out infinite;
+    fill: none;
+}
+
+/* Animation to create the moving dash effect */
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 500; /* Start from the end */
+    }
+    100% {
+        stroke-dashoffset: 0; /* Move to the start */
+    }
+}
+
+/* Optional: Add glow effect */
+.house-polygon {
+    filter: drop-shadow(0 0 5px orange);
+}
+
+/* To enhance the sparkle effect, we can add a glowing dot along the path */
+@keyframes spark {
+    0%, 100% {
+        stroke: orange;
+        stroke-width: 2;
+    }
+    50% {
+        stroke: yellow;
+        stroke-width: 4;
+    }
+}
+
+
+/* Specific styles for certain houses */
+/*.house-1 {
+    fill: rgba(255, 165, 0, 0.2); // Light orange 
+}
+
+.house-2 {
+    fill: rgba(0, 255, 255, 0.2); // Light cyan 
+}*/
+
+/* Add hover effect to all houses */
+.house-polygon:hover {
+    fill: rgba(255, 255, 0, 0.3); /* Light yellow on hover */
+}

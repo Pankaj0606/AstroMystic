@@ -1,0 +1,74 @@
+.social-media-strip {
+    background-color: #1a0c2e; /* A slightly darker, richer purple */
+    padding: 15px 0; /* Increased vertical padding, no horizontal */
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    border-top: 1px solid rgba(255, 215, 0, 0.3); /* Subtle gold top border */
+}
+
+.social-media-track {
+    display: inline-block; /* Allows the track to be animated */
+    animation: moveText 30s linear infinite; /* SLOWER: Increased duration to 30s */
+}
+
+.social-media-content {
+    display: inline-flex; /* Use inline-flex for better alignment */
+    align-items: center;
+    justify-content: center;
+}
+
+.social-link {
+    display: inline-flex; /* Helps center the icon inside the link */
+    align-items: center;
+    text-decoration: none;
+    color: #E0E0E0; /* Soft silver color */
+    margin: 0 40px; /* Increased spacing */
+    font-size: 2rem; /* BIGGER: Increased icon size */
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* --- CREATIVE: The pulsating glow effect --- */
+    animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.social-link:hover {
+    color: gold; /* Glows brighter on hover */
+    transform: scale(1.2); /* Pops out on hover */
+}
+
+/* --- CREATIVE: The floating stars --- */
+.star {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 20px;
+    animation: twinkle 5s linear infinite;
+}
+
+/* Add slight variations to the stars */
+.star:nth-of-type(2) { animation-delay: -1s; }
+.star:nth-of-type(3) { animation-delay: -2.5s; }
+
+/* Keyframes for the main scrolling animation */
+@keyframes moveText {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%); /* Move by half the total width */
+    }
+}
+
+/* Keyframes for the icon glow */
+@keyframes pulseGlow {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(224, 224, 224, 0.4);
+    }
+    50% {
+        text-shadow: 0 0 15px rgba(224, 224, 224, 0.8);
+    }
+}
+
+/* Keyframes for the star twinkle */
+@keyframes twinkle {
+    0%, 100% { opacity: 0.4; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.1); }
+}
