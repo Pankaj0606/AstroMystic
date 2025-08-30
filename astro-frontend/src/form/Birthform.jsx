@@ -28,7 +28,7 @@ const Birthform = () => {
 
     // Send POST request to the backend
     try {
-      const response = await fetch('http://localhost:3000/api/planets', {
+      const response = /*await fetch('http://localhost:3000/api/planets',*/await fetch('https://astromystic-backend-nae0.onrender.com/api/planets', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
