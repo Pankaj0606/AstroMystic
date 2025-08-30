@@ -84,6 +84,7 @@
 
 const express = require('express');
 const router = express.Router();
+const jyotishApiBaseUrl = process.env.JYOTISH_API_URL;
 require('dotenv').config();
 
 // Use dynamic import for node-fetch
@@ -143,8 +144,9 @@ router.post('/planets', async (req, res) => {
         varga: 'D1,D2,D3,D4,D7,D9,D10,D12,D16,D20,D24,D27,D30,D40,D45,D60', // Request all Vargas at once
         infolevel: 'basic,panchanga' // Get basic info and panchanga
     });
-
-    const apiUrl = `http://localhost:9393/api/calculate?${params.toString()}`;
+    
+    const apiUrl = `${jyotishApiBaseUrl}/api/calculate?${params.toString()}`;
+    //const apiUrl = `http://localhost:9393/api/calculate?${params.toString()}`;
 
     console.log("Calling Jyotish API with URL:", apiUrl); // Good for debugging
 
