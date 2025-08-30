@@ -67,6 +67,16 @@ RUN set -eux; \
 # Copy rest of the application
 COPY . .
 
+# --- START OF ADDED COMMAND ---
+#
+# COMPILE THE SWISS EPHEMERIS LIBRARY
+# This is the crucial step. We run this after copying all the source files (COPY . .)
+# to ensure the 'swetest' directory is present.
+RUN cd /var/www/api/swetest/src && make clean && make && chmod 777 . && chmod +x swetest
+#
+# --- END OF ADDED COMMAND ---
+
+
 # After copying application files but before clearing cache
 RUN mkdir -p /var/www/api/var/cache /var/www/api/var/log && \
     chown -R www-data:www-data /var/www/api/var && \
